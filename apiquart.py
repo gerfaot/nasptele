@@ -70,7 +70,7 @@ async def request_nasp(article, bot):
         return dict_nasp
     #raise ValueError('Undefined unit: {}'.format(bot))
     else:
-        dict_nasp = {'error'}
+        dict_nasp = {'bot': 'error'}
         return dict_nasp
 
 
