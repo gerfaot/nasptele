@@ -100,10 +100,10 @@ async def alix_req():
 async def echo() -> Response:
     data = await request.get_json()
     strdata = json.dumps(data)
-    asdf = json.loads(strdata)
+    jsondata = json.loads(strdata)
     both_dict = []
-    for bot_num in asdf[0]['bots']:
-        nasp_dict = await request_nasp(asdf[0]['query'], bot_num)
+    for bot_num in jsondata[0]['bots']:
+        nasp_dict = await request_nasp(jsondata[0]['query'], bot_num)
         print(nasp_dict)
         both_dict.append(nasp_dict)
         print(bot_num)
